@@ -1,5 +1,6 @@
 import {
-  TEST
+  TEST,
+  REQ_DATA
 } from '../actions/Test'
 
 const Test = (state = {}, action) => {
@@ -9,10 +10,22 @@ const Test = (state = {}, action) => {
         ...action
       }
     default:
-      return state;
+      return state
+  }
+}
+
+const reqData = (state = {}, action) => {
+  switch (action.type) {
+    case REQ_DATA:
+      return {
+        ...action
+      }
+    default: 
+      return state
   }
 }
 
 export default {
-  Test
+  Test,
+  reqData
 }
